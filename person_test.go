@@ -2,8 +2,6 @@ package faker
 
 import (
 	"testing"
-
-	"github.com/Gujarats/logger"
 )
 
 // get random 10 male's name
@@ -30,8 +28,6 @@ func TestName(t *testing.T) {
 			names[name] = true
 		}
 	}
-
-	logger.Debug("result = ", names)
 }
 
 func TestNames(t *testing.T) {
