@@ -178,7 +178,7 @@ var FirstNameMale = []string{"Aaron", "Abdiel", "Abdul", "Abdullah", "Abe", "Abe
 	"Zachary", "Zachery", "Zack", "Zackary", "Zackery", "Zakary", "Zander", "Zane", "Zechariah",
 	"Zion"}
 
-var firstNameFemale = []string{"Aaliyah", "Abagail", "Abbey", "Abbie", "Abbigail", "Abby", "Abigail", "Abigale", "Abigayle", "Ada",
+var FirstNameFemale = []string{"Aaliyah", "Abagail", "Abbey", "Abbie", "Abbigail", "Abby", "Abigail", "Abigale", "Abigayle", "Ada",
 	"Adah", "Adaline", "Addie", "Addison", "Adela", "Adele", "Adelia", "Adeline", "Adell",
 	"Adella", "Adelle", "Aditya", "Adriana", "Adrianna", "Adrienne", "Aglae", "Agnes", "Agustina",
 	"Aida", "Aileen", "Aimee", "Aisha", "Aiyana", "Alaina", "Alana", "Alanis", "Alanna",
@@ -393,7 +393,7 @@ var LastName = []string{"Abbott", "Abernathy", "Abshire", "Adams", "Altenwerth",
 	"Wiza", "Wolf", "Wolff", "Wuckert", "Wunsch", "Wyman", "Yost", "Yundt", "Zboncak",
 	"Zemlak", "Ziemann", "Zieme", "Zulauf"}
 
-var suffix = []string{"Jr.", "Sr.", "I", "II", "III", "IV", "V", "MD", "DDS", "PhD",
+var Suffix = []string{"Jr.", "Sr.", "I", "II", "III", "IV", "V", "MD", "DDS", "PhD",
 	"DVM"}
 
 var maleNameFormats = []string{"{{firstNameMale}} {{lastName}}", "{{firstNameMale}} {{lastName}}", "{{firstNameMale}} {{lastName}}", "{{firstNameMale}} {{lastName}}", "{{titleMale}} {{firstNameMale}} {{lastName}}", "{{firstNameMale}} {{lastName}} {{suffix}}", "{{titleMale}} {{firstNameMale}} {{lastName}} {{suffix}}"}
