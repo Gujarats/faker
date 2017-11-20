@@ -6,6 +6,15 @@ import (
 
 var genders = []string{"male", "female"}
 
+func Names(n int) []string {
+	var names []string
+	for i := 0; i < n; i++ {
+		names = append(names, Name())
+	}
+
+	return names
+}
+
 // Get a random name for specific male or female if specify
 func Name() string {
 	PersonGenerator := []string{PersonSuffix(), Person()}
