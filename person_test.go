@@ -43,7 +43,7 @@ func TestNames(t *testing.T) {
 }
 
 func TestEmptyValueForFunc(t *testing.T) {
-	var testFunc = []func() string{Name, PersonSuffix, Person, PersonMale, PersonFemale, suffix, Male, Female, lastName}
+	var testFunc = []func() string{Name, PersonSuffix, Person, PersonMale, PersonFemale, suffix, Male, Female, lastName, firstNameMale, firstNameFemale}
 	for i := 0; i < len(testFunc); i++ {
 		result := testFunc[i]()
 		if result == "" || len(result) <= 0 {

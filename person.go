@@ -49,21 +49,27 @@ func PersonFemale() string {
 	return Female() + " " + suffix()
 }
 
-func suffix() string {
-	return getRandomValue(en_US.Suffix)
-}
-
 // return random male name with first and last name
 func Male() string {
-	firstNameMale := getRandomValue(en_US.FirstNameMale)
-	return firstNameMale + " " + lastName()
+	return firstNameMale() + " " + lastName()
+}
+
+func firstNameMale() string {
+	return getRandomValue(en_US.FirstNameMale)
 }
 
 func Female() string {
-	firstNameFemale := getRandomValue(en_US.FirstNameFemale)
-	return firstNameFemale + " " + lastName()
+	return firstNameFemale() + " " + lastName()
+}
+
+func firstNameFemale() string {
+	return getRandomValue(en_US.FirstNameFemale)
 }
 
 func lastName() string {
 	return getRandomValue(en_US.LastName)
+}
+
+func suffix() string {
+	return getRandomValue(en_US.Suffix)
 }
