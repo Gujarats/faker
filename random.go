@@ -8,3 +8,7 @@ func getRandomIndex(data []string) int {
 	}
 	return 0
 }
+
+func getRandomValue(data []string) string {
+	return data[getRandomIndex(data)]
+}
