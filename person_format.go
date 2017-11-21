@@ -21,7 +21,7 @@ func GetPersonFormat(formats ...string) string {
 	formatter := getFormatter()
 	var result string
 	for _, validFormat := range validFormats {
-		result = result + formatter[validFormat]()
+		result = result + " " + formatter[validFormat]()
 	}
 
 	return result
