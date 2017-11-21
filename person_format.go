@@ -7,8 +7,18 @@ import (
 	"strings"
 )
 
-// get random value with given format
-func GetPersonFormat(formats ...string) string {
+// get a random value with given format
+func Namesf(n int, formats ...string) []string {
+	var result []string
+	for i := 0; i < n; i++ {
+		result = append(result, Namef(formats...))
+	}
+
+	return result
+}
+
+// get a random value with given format
+func Namef(formats ...string) string {
 	if len(formats) == 0 {
 		log.Fatalf("format = %+v must not empty", formats)
 	}

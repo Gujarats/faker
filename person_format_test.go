@@ -28,7 +28,7 @@ func TestGetPersonFormat(t *testing.T) {
 	}
 
 	for index, testObject := range testObjects {
-		result := GetPersonFormat(testObject.formats...)
+		result := Namef(testObject.formats...)
 		if len(result) == 0 {
 			t.Errorf("index = %v, result = %+v must not empty", index, result)
 		}
