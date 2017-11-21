@@ -15,7 +15,7 @@ func Names(n int) []string {
 	return names
 }
 
-// Get a random name for specific male or female if specify
+// Get a random name
 func Name() string {
 	PersonGenerator := []string{PersonSuffix(), Person()}
 	return PersonGenerator[getRandomIndex(PersonGenerator)]
@@ -31,6 +31,7 @@ func PersonSuffix() string {
 	}
 }
 
+// generate person without suffix
 func Person() string {
 	gender := genders[getRandomIndex(genders)]
 	if gender == "male" {
@@ -49,20 +50,20 @@ func PersonFemale() string {
 }
 
 func suffix() string {
-	return en_US.Suffix[getRandomIndex(en_US.Suffix)]
+	return getRandomValue(en_US.Suffix)
 }
 
 // return random male name with first and last name
 func Male() string {
-	firstNameMale := en_US.FirstNameMale[getRandomIndex(en_US.FirstNameMale)]
+	firstNameMale := getRandomValue(en_US.FirstNameMale)
 	return firstNameMale + " " + lastName()
 }
 
 func Female() string {
-	firstNameFemale := en_US.FirstNameFemale[getRandomIndex(en_US.FirstNameFemale)]
+	firstNameFemale := getRandomValue(en_US.FirstNameFemale)
 	return firstNameFemale + " " + lastName()
 }
 
 func lastName() string {
-	return en_US.LastName[getRandomIndex(en_US.LastName)]
+	return getRandomValue(en_US.LastName)
 }

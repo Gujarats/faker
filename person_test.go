@@ -1,6 +1,8 @@
 package faker
 
 import (
+	"reflect"
+	"runtime"
 	"testing"
 )
 
@@ -36,6 +38,17 @@ func TestNames(t *testing.T) {
 		names := Names(total)
 		if hasDuplicate(names) {
 			t.Errorf("index = %v,Generator Names(%+v) return duplicate data = %+v\n", index, total, names)
+		}
+	}
+}
+
+func TestEmptyValueForFunc(t *testing.T) {
+	var testFunc = []func() string{Name, PersonSuffix, Person, PersonMale, PersonFemale, suffix, Male, Female, lastName}
+	for i := 0; i < len(testFunc); i++ {
+		result := testFunc[i]()
+		if result == "" || len(result) <= 0 {
+			funcName := runtime.FuncForPC(reflect.ValueOf(testFunc[i]).Pointer()).Name()
+			t.Errorf("%+s function return empty", funcName)
 		}
 	}
 }
